@@ -1,0 +1,257 @@
+@charset "UTF-8";
+body{
+    margin: 0;
+}
+:root{
+    --vozindex: 0;
+}
+img:not(.addvideo1):not(.notif1):not(.pfp):not(.ytbr1):not(.ytbr2):not(.voz1){
+    pointer-events: none;
+}
+img{
+    outline: none;
+    user-select: none;
+}
+body{
+    background-color: black;
+    height: 110vh;
+}
+h1{
+    color: white;
+}
+nav{
+    height: 1.5vh;
+}
+img#menuimg1{
+    position: absolute;
+    height: 3.05vh;
+    left: 1.55vw;
+    top: 2.01vh;
+    z-index: 2;
+}
+img#menuimg2{
+    position: relative;
+    height: 3.05vh;
+    left: 10%;
+    top: 2%;
+    z-index: 3;
+}
+img#menuimg3{
+    position: absolute;
+    height: 6.7vh;
+    left: 0.62vw;
+    top: 0.2vh;
+    z-index: 1;
+    opacity: 0;
+}
+img#ytbr1{
+    position: absolute;
+    height: 3.55vh;
+    left: 4.65vw;
+    top: 1.7vh;
+    cursor: pointer;
+}
+img#ytbr2{
+    display: block;
+    position: relative;
+    height: 3.55%;
+    left: 30%;
+    top: -2vh;
+    cursor: pointer;
+}
+img#imgpesquisa{
+    position: absolute;
+    left: 28.8%;
+    height: 5.55vh;
+    top: 1vh;
+}
+.imgpesquisa2{
+    opacity: 0;
+    position: absolute;
+    left: 26.4%;
+    height: 5.5vh;
+    top: 1vh;
+    z-index: 0;
+}
+input#pesquisa{
+    position: absolute;
+    left:29.7%;
+    top: 1.8vh;
+    height: 3.7vh;
+    width: 31vw;
+    background-color: black;
+    border: 0;
+    color: white;
+    font-size: 12pt;
+    z-index: 3;
+    outline: none;
+}
+
+input#pesquisa:focus + .imgpesquisa2{
+    opacity: 1;
+}
+
+input#botaopesquisa{
+    position: absolute;
+    left: 63.8%;
+    height: 5vh;
+    width: 3.5vw;
+    top: 1.3vh;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+img#voz1{
+    position: absolute;
+    left: 68.5%;
+    top: 0.89vh;
+    z-index: 4;
+    height: 5.4vh;
+    opacity: 1;
+    cursor: pointer;
+}
+img#voz2{
+    position: absolute;
+    left: 68.5%;
+    top: 0.89vh;
+    z-index: 4;
+    opacity: 0;
+    height: 5.4vh;
+}
+
+.voz1:hover + .voz2{
+    opacity: 1;
+    transition: all 100ms;
+}
+
+#teclado{
+    position: absolute;
+    left: 61.5%;
+    top: 2.8vh;
+    height: 1.8vh;
+}
+#teclado:hover{
+    text-decoration: none;
+}
+#tecladohide{
+    display: none;
+}
+#teclado:hover img:first-child{display:none}
+#teclado:hover img:last-child{display:inline-block}
+
+.addvideo1{
+    position: absolute;
+    left: 88.25vw;
+    top: 2.4vh;
+    height: 2.6vh;
+    cursor: pointer;
+}
+.addvideo2{
+    position: absolute;
+    left: 87.4vw;
+    top: 0.75vh;
+    height: 6vh;
+    opacity:0;
+}
+.addvideo1:hover ~.addvideo2{
+    opacity: 1;
+    transition: all 100ms;
+}
+
+div#sidebar{    
+    color: aliceblue;
+    display: block;
+}
+.notif1{
+    position: absolute;
+    left: 91.2vw;
+    top: 1.8vh;
+    height: 3.8vh;
+    cursor: pointer;
+}
+.notif2{
+    position: absolute;
+    left: 90.6vw;
+    top: 0.79vh;
+    height: 5.98vh;
+    opacity:0;
+}
+.notif1:hover ~.notif2{
+    opacity: 1;
+    transition: all 100ms;
+}
+.pfp{
+    position: absolute;
+    left: 94.65vw;
+    top: 1vh;
+    height: 5.25vh;
+    cursor: pointer;
+}
+.menu{
+    position: absolute;
+    left: 1.7vw;
+    top: 2.4vh;
+    z-index: 2;
+    padding: 10px;
+    transform: scale(1.65);
+    color: black;
+    cursor: pointer;
+    background-color: black;
+    opacity: 0;
+}
+.menu input{
+    content: "";
+}
+.menu:hover ~ img#menuimg3{
+    opacity: 1;
+    transition: all 200ms;
+}
+
+div.sidebar{
+    position: absolute;
+    opacity: 1;
+    z-index: 1;
+    background-color: black;
+    display: block;
+    height: 100vh;
+    width: 15.5vw;
+    transition: all 200ms;
+}
+.sidebar h1{
+    position: relative;
+    top: 5vh;
+    left: auto;   
+    text-align: center;
+}
+.barra{
+    display: block;
+    position: relative;
+    width: 91.2%;
+    left: 3.5%;
+    top: 4.75%;
+}
+div#divmenu:has(input:checked) + .sidebar{
+   opacity: 0;
+   width: 0;
+   transition: all 200ms;
+}
+.nav{
+    position: sticky;
+    top: 0;
+    z-index: 4;
+    background-color: black;
+    height: 7.5vh;
+}
+div.divvideo{
+    display: block;
+    top: 10vh;
+}
+.video{
+    top: 7.35vh;
+    width:99vw;
+    height: 76.5vh;
+    position: flex;
+}
+
+
